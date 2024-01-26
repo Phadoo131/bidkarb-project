@@ -1,0 +1,12 @@
+.containercolor {
+  background-color: #e1eaef;
+}
+
+.bg-indigo {
+  background-color: #6610f2;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #6610f2;
+  /* color: #yourTextColor; */
+}

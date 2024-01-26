@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipment Recieved</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Shipment Sucessfully!</h2>
+
+<p>Auction ID: <span th:text="${auctionID}"></span></p>
+
+<p>You have recieved the shipment</p>
+<p>Thank you for buying at our website, We hope you enjoy your product.</p>
+<br>
+<p>If you want to rate or leave a comment to this product, Please click this button.</p>
+<p><a th:href="@{'Detail and Rating url'}" target="_blank">Rating</a></p>
+<p>Thank you!</p>
+<br>
+<br>
+<table>
+    <tr>
+        <th>Tracking number</th>
+        <th>Shipping company</th>
+        <th>remark</th>
+    </tr>
+    <tr>
+        <td th:text="${trackingNumber}"></td>
+        <td th:text="${Shipping company}"></td>
+        <td th:text="${otherShippingCompany}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

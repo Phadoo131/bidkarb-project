@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Successful payment</h2>
+
+<p>Auction ID: <span th:text="${auctionID}"></span></p>
+
+<p>Your buyer has successfully paid for the product!</p>
+<p>Please proceed further for the shipping process within 3 days, otherwise the auction will be cancelled, and the amount paid will be transferred back to buyer!</p>
+<p>Buyer Address: <a th:text="${buyerAddress}"></a></p>
+<br>
+<p>If you've sent the product to your buyer, please share the tracking number, shipping company via the following link</p>
+<p><a th:href="@{${shippingConfirmationUrl}}" target="_blank">Shipping Confirmation</a></p>
+<p>Thank you!</p>
+<br>
+<br>
+<p>Receipt</p>
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th>Amount</th>
+        <th>Amount with Tax (7%)</th>
+    </tr>
+    <tr>
+        <td th:text="${productName}"></td>
+        <td th:text="${#numbers.formatDecimal(amount, 0, 'COMMA', 2, 'POINT')}"></td>
+        <td th:text="${#numbers.formatDecimal(amountPlusTax, 0, 'COMMA', 2, 'POINT')}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

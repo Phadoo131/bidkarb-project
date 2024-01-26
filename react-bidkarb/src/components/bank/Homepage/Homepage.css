@@ -1,0 +1,45 @@
+.container {
+  max-width: 100%; /* Adjusted to ensure it fits the page */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .unlock-excitement {
+  color: #1d51b6;
+  font-family: "Fira Code-Regular", Helvetica, sans-serif;
+  font-size: 4vw; /* Relative font size */
+  font-weight: 400;
+  letter-spacing: -0.1em; /* Using relative units for letter-spacing */
+  text-align: center;
+  width: 100%;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.text-description {
+  color: #000000;
+  font-size: 1.5vw; /* Relative font size */
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6em; /* Using relative units for line-height */
+  position: absolute;
+  width: 1000px;
+  left: 0;
+  top: 0;
+}
+
+.test {
+  max-width: 40%;
+}
+
+.text-title {
+  color: #293a97;
+}
+

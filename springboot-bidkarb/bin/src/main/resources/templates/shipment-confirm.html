@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Shipment detail</h2>
+
+<p>Auction ID: <span th:text="${auctionID}"></span></p>
+
+<p>Your seller has successfully sent for the product!</p>
+<p>we're delighted to inform you that your order has been shipped! The seller has sent the product, and you can track its journey using the provided tracking number according to the table below. If you have any questions or concerns, feel free to reach out to us. Thank you for your purchase!</p>
+<br>
+<p>If you've received the product from your seller, please confirm receive the product and rate before 14 days from seller has sent the product due to the auction status will be updated to 'Completed'. via the following link</p>
+<p><a th:href="@{'Receive Confirmation Page url'}" target="_blank">Receive Confirmation</a></p>
+<p>Thank you!</p>
+<br>
+<br>
+<table>
+    <tr>
+        <th>Tracking number</th>
+        <th>Shipping company</th>
+        <th>remark</th>
+    </tr>
+    <tr>
+        <td th:text="${trackingNumber}"></td>
+        <td th:text="${Shipping company}"></td>
+        <td th:text="${otherShippingCompany}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
